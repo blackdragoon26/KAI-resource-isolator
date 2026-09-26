@@ -57,7 +57,7 @@ curl {pod ip}:9394/metrics
 
 ## Customization
 
-Tune `paths.containerVgpuMount` and `webhook.gpuShareResources` for your environment and HAMi extended resource names.
+Tune `paths.containerVgpuMount` for your environment. The webhook injects into any pod carrying the KAI `gpu-fraction` or `gpu-memory` annotation (the target container is the one named by `gpu-fraction-container-name`, else the first container); there is no chart value for the trigger.
 
 ## Design
 
